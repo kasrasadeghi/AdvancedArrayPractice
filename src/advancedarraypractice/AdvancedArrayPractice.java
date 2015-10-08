@@ -42,7 +42,7 @@ public class AdvancedArrayPractice
         System.out.println( "indexOf( " + js + ", 4 ) ==> " + indexOf( jenny, 4 ) );
         
         int [] ioa = { 4, 5, 6, 4, 5, 6 };
-        System.out.println( "indexOf( " + intArrayToString( ioa ) + ", 6 ==> " + indexOf( ioa, 3 ) );
+        System.out.println( "indexOf( " + intArrayToString( ioa ) + ", 6 ) ==> " + indexOf( ioa, 3 ) );
         System.out.println();
         
         int [] ioa2 = { 5, 6, 9 };
@@ -99,9 +99,9 @@ public class AdvancedArrayPractice
         
         System.out.println();
         
-        System.out.println("appendArrays( " + js + ", " + intArrayToString( ioa ) + " ) ==> " + intArrayToString( appendArrays(jenny, ioa) ) );
-        System.out.println("appendArrays( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + intArrayToString( appendArrays(jenny, ioa4) ) );
-        System.out.println("appendArrays( " + intArrayToString( ioa4 ) + ", " + js + " ) ==> " + intArrayToString( appendArrays(ioa4, jenny) ) );
+        System.out.println("appendArrays( " + js + ", " + intArrayToString( ioa ) + " ) ==> " + intArrayToString( horizontalConcatenate(jenny, ioa) ) );
+        System.out.println("appendArrays( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + intArrayToString( horizontalConcatenate(jenny, ioa4) ) );
+        System.out.println("appendArrays( " + intArrayToString( ioa4 ) + ", " + js + " ) ==> " + intArrayToString( horizontalConcatenate(ioa4, jenny) ) );
         
         System.out.println();
         
@@ -121,9 +121,8 @@ public class AdvancedArrayPractice
     {
         String scarlet = "[ ";
         for ( int i = 0; i < arr.length; i++ )
-        {
             scarlet += arr[i] + ((i < arr.length-1)?", ":" ");
-        }
+        
         scarlet += "]";
         return scarlet;
     }
@@ -141,7 +140,11 @@ public class AdvancedArrayPractice
     // returns a new array containing some of the elements of arr starting at start and ending one element before end
     public static int [] getSubArray( int [] arr, int start, int end )
     {
-        return new int[0];
+        int[] output = new int[end - start];
+        for (int i = start; i < end; i++) 
+            output[i - start] = arr[i];
+        
+        return output;
     }
     
     // getSubArray
@@ -156,7 +159,12 @@ public class AdvancedArrayPractice
     // returns a new array containing some of the elements of arr starting at start and ending at the end of arr
     public static int [] getSubArray( int [] arr, int start )
     {
-        return new int[0];
+        int end = arr.length;
+        int[] output = new int[end - start];
+        for (int i = start; i < end; i++) 
+            output[i - start] = arr[i];
+        
+        return output;
     }
     
     // copyInPlaceSubArray
@@ -171,6 +179,8 @@ public class AdvancedArrayPractice
     // start - the starting index of where to start copying
     public static void copyInPlaceSubArray( int [] target, int [] source, int start )
     {
+        for(int i = start; i < source.length + start; i++) 
+            target[i] = source[i - start];
         
     }
     
@@ -190,7 +200,10 @@ public class AdvancedArrayPractice
     // NOTE: the target array should not be modified by this function!
     public static int [] copyNewSubArray( int [] target, int [] source, int start )
     {
-        return new int[0];
+        int[] output = target;
+        for(int i = start; i < source.length + start; i++) 
+            output[i] = source[i - start];
+        return output;
     }
     
     // indexOf
@@ -207,6 +220,7 @@ public class AdvancedArrayPractice
     // returns the first index where target can be found or -1 if the array does not contain the target
     public static int indexOf( int [] arr, int target )
     {
+        for (int i = 0; i < arr.length; i++) if (arr[i] == target) return i;
         return -1;
     }
     
@@ -297,18 +311,18 @@ public class AdvancedArrayPractice
         
     }
     
-    // appendArrays
+    // horizontalConcatenate
     // produces a new array which is the elements of one array followed by the elements of a second array
     // ex:
-    // appendArrays( {8, 6, 7, 5, 3, 0, 9}, {4, 5, 6, 4, 5, 6} ) ==> {8, 6, 7, 5, 3, 0, 9, 4, 5, 6, 4, 5, 6}
-    // appendArrays( {8, 6, 7, 5, 3, 0, 9}, { } ) ==> {8, 6, 7, 5, 3, 0, 9}
-    // appendArrays( { }, {8, 6, 7, 5, 3, 0, 9} ) ==> {8 ,6, 7, 5, 3, 0, 9}
+    // horizontalConcatenate( {8, 6, 7, 5, 3, 0, 9}, {4, 5, 6, 4, 5, 6} ) ==> {8, 6, 7, 5, 3, 0, 9, 4, 5, 6, 4, 5, 6}
+    // horizontalConcatenate( {8, 6, 7, 5, 3, 0, 9}, { } ) ==> {8, 6, 7, 5, 3, 0, 9}
+    // horizontalConcatenate( { }, {8, 6, 7, 5, 3, 0, 9} ) ==> {8 ,6, 7, 5, 3, 0, 9}
     // inputs:
     // arr1 - the first array
     // arr2 - the second array
     // output:
     // an array which contains the elements of both arr1 and arr2
-    public static int [] appendArrays( int [] arr1, int [] arr2 )
+    public static int [] horizontalConcatenate( int [] arr1, int [] arr2 )
     {
         return new int[0];
     }
