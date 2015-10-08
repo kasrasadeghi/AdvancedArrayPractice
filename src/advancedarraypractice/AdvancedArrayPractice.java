@@ -220,7 +220,11 @@ public class AdvancedArrayPractice
     // returns the first index where target can be found or -1 if the array does not contain the target
     public static int indexOf( int [] arr, int target )
     {
-        for (int i = 0; i < arr.length; i++) if (arr[i] == target) return i;
+          for (int i = 0; i < arr.length; i++)
+        {
+            if ( arr[i] == target ) 
+                return i;  //We found it!!!
+        } 
         return -1;
     }
     
@@ -324,6 +328,7 @@ public class AdvancedArrayPractice
     // an array which contains the elements of both arr1 and arr2
     public static int [] horizontalConcatenate( int [] arr1, int [] arr2 )
     {
+        int[] output = new int[arr1.length + arr2.length];
         return new int[0];
     }
     
@@ -353,6 +358,9 @@ public class AdvancedArrayPractice
     // the dot product of the two vectors
     public static int dotProduct( int [] arr1, int [] arr2 )
     {
-        return 0;
+        int output = 0;
+        for (int i = 0; i < 3; i++)
+            output+= (arr1[i] * arr2[i]);
+        return output;
     }
 }
