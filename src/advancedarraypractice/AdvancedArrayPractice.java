@@ -42,7 +42,7 @@ public class AdvancedArrayPractice
         System.out.println( "indexOf( " + js + ", 4 ) ==> " + indexOf( jenny, 4 ) );
         
         int [] ioa = { 4, 5, 6, 4, 5, 6 };
-        System.out.println( "indexOf( " + intArrayToString( ioa ) + ", 6 ) ==> " + indexOf( ioa, 3 ) );
+        System.out.println( "indexOf( " + intArrayToString( ioa ) + ", 6 ) ==> " + indexOf( ioa, 6 ) );
         System.out.println();
         
         int [] ioa2 = { 5, 6, 9 };
@@ -188,7 +188,7 @@ public class AdvancedArrayPractice
     // like copyInPlaceSubArray, but returns a new array rather than modifying the old array
     // ex:
     // int [] jenny = { 8, 6, 7, 5, 3, 0, 9 };
-    // copyNewSubArray( jeny, { 11, 28, -3, 2 }, 2 ) ==> { 8, 6, 11, 28, -3, 2, 9 }
+    // copyNewSubArray( jenny, { 11, 28, -3, 2 }, 2 ) ==> { 8, 6, 11, 28, -3, 2, 9 }
     // but jenny is still { 8, 6, 7, 5, 3, 0, 9 }
     // inputs:
     // target - the target array
@@ -200,7 +200,8 @@ public class AdvancedArrayPractice
     // NOTE: the target array should not be modified by this function!
     public static int [] copyNewSubArray( int [] target, int [] source, int start )
     {
-        int[] output = target;
+        int[] output = new int[target.length];
+        for (int i = 0; i < target.length; i++) output[i] = target[i];
         for(int i = start; i < source.length + start; i++) 
             output[i] = source[i - start];
         return output;
@@ -220,11 +221,9 @@ public class AdvancedArrayPractice
     // returns the first index where target can be found or -1 if the array does not contain the target
     public static int indexOf( int [] arr, int target )
     {
-          for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) 
             if ( arr[i] == target ) 
-                return i;  //We found it!!!
-        } 
+                return i; 
         return -1;
     }
     
@@ -245,7 +244,11 @@ public class AdvancedArrayPractice
     // the second is to use nested for-loops
     public static int[] indicesOf( int [] source, int [] target )
     {
-        return new int[0];
+        int [] output = new int[target.length];
+        for (int i = 0; i < target.length; i++) {
+            output[i] = indexOf(source, target[i]);
+        }
+        return output;
     }
     
     // indexOfSubArray
@@ -359,7 +362,7 @@ public class AdvancedArrayPractice
     public static int dotProduct( int [] arr1, int [] arr2 )
     {
         int output = 0;
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < arr1.length; i++)
             output+= (arr1[i] * arr2[i]);
         return output;
     }
