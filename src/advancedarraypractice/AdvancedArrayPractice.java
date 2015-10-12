@@ -20,100 +20,105 @@ public class AdvancedArrayPractice
         int [] jenny = { 8, 6, 7, 5, 3, 0, 9 };
         String js = intArrayToString( jenny );
         
-        System.out.println( "getSubArray( " + js + ", 2, 5 ) ==> " + intArrayToString( getSubArray( jenny, 2, 5) ));
-        System.out.println( "getSubArray( " + js + ", 2, 2 ) ==> " + intArrayToString( getSubArray( jenny, 2, 2) ));
-        System.out.println( "getSubArray( " + js + ", 3 ) ==> " + intArrayToString( getSubArray( jenny, 3) ));
-        System.out.println( "getSubArray( " + js + ", 7 ) ==> " + intArrayToString( getSubArray( jenny, 7) ));
-        System.out.println();
+//        System.out.println( "getSubArray( " + js + ", 2, 5 ) ==> " + intArrayToString( getSubArray( jenny, 2, 5) ));
+//        System.out.println( "getSubArray( " + js + ", 2, 2 ) ==> " + intArrayToString( getSubArray( jenny, 2, 2) ));
+//        System.out.println( "getSubArray( " + js + ", 3 ) ==> " + intArrayToString( getSubArray( jenny, 3) ));
+//        System.out.println( "getSubArray( " + js + ", 7 ) ==> " + intArrayToString( getSubArray( jenny, 7) ));
+//        System.out.println();
         
         int [] subarray = { 11, 28, -3, 2 };
         int [] jenny2 = { 8, 6, 7, 5, 3, 0, 9 };
-        System.out.println( "copyInPlaceSubArray( " + intArrayToString(jenny2) + ", " + intArrayToString( subarray ) + ", 2 ) " );
+//        System.out.println( "copyInPlaceSubArray( " + intArrayToString(jenny2) + ", " + intArrayToString( subarray ) + ", 2 ) " );
         copyInPlaceSubArray( jenny2, subarray, 2 );
-        System.out.println( "jenny2 is now:       " + intArrayToString(jenny2) );
-        System.out.println();
+//        System.out.println( "jenny2 is now:       " + intArrayToString(jenny2) );
+//        System.out.println();
         
-        System.out.println( "copyNewSubArray( " + js + ", " + intArrayToString( subarray ) + ", 2 ) ==>" +
-                intArrayToString( copyNewSubArray( jenny, subarray, 2 ) ) );
-        System.out.println( "jenny is now:    " + intArrayToString( jenny ) );
-        System.out.println();
+//        System.out.println( "copyNewSubArray( " + js + ", " + intArrayToString( subarray ) + ", 2 ) ==>" +
+//                intArrayToString( copyNewSubArray( jenny, subarray, 2 ) ) );
+//        System.out.println( "jenny is now:    " + intArrayToString( jenny ) );
+//        System.out.println();
         
-        System.out.println( "indexOf( " + js + ", 3 ) ==> " + indexOf( jenny, 3 ) );
-        System.out.println( "indexOf( " + js + ", 4 ) ==> " + indexOf( jenny, 4 ) );
+//        System.out.println( "indexOf( " + js + ", 3 ) ==> " + indexOf( jenny, 3 ) );
+//        System.out.println( "indexOf( " + js + ", 4 ) ==> " + indexOf( jenny, 4 ) );
         
         int [] ioa = { 4, 5, 6, 4, 5, 6 };
-        System.out.println( "indexOf( " + intArrayToString( ioa ) + ", 6 ) ==> " + indexOf( ioa, 6 ) );
-        System.out.println();
+//        System.out.println( "indexOf( " + intArrayToString( ioa ) + ", 6 ) ==> " + indexOf( ioa, 6 ) );
+//        System.out.println();
         
         int [] ioa2 = { 5, 6, 9 };
         int [] ioa3 = { 4, 3, 8 };
         int [] ioa4 = { };
-        System.out.println( "indicesOf( " + js + ", " + intArrayToString( ioa2 ) + " ) ==> " + intArrayToString( indicesOf( jenny, ioa2 ) ) );
-        System.out.println( "indicesOf( " + js + ", " + intArrayToString( ioa3 ) + " ) ==> " + intArrayToString( indicesOf( jenny, ioa3 ) ) );
-        System.out.println( "indicesOf( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + intArrayToString( indicesOf( jenny, ioa4 ) ) );
-        
-        System.out.println();
+//        System.out.println( "indicesOf( " + js + ", " + intArrayToString( ioa2 ) + " ) ==> " + intArrayToString( indicesOf( jenny, ioa2 ) ) );
+//        System.out.println( "indicesOf( " + js + ", " + intArrayToString( ioa3 ) + " ) ==> " + intArrayToString( indicesOf( jenny, ioa3 ) ) );
+//        System.out.println( "indicesOf( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + intArrayToString( indicesOf( jenny, ioa4 ) ) );
+//        
+//        System.out.println();
         
         int [] sa1 = { 5, 3, 0 };
         int [] sa2 = { 5, 3, 1 };
         int [] sa3 = { 5, 6 };
-        System.out.println( "indexOfSubArray( " + js + ", " + intArrayToString( sa1 ) + " ) ==> " + indexOfSubArray( jenny, sa1 ) );
-        System.out.println( "indexOfSubArray( " + js + ", " + intArrayToString( sa2 ) + " ) ==> " + indexOfSubArray( jenny, sa2 ) );
-        System.out.println( "indexOfSubArray( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + indexOfSubArray( jenny, ioa4 ) );
-        System.out.println( "indexOfSubArray( " + intArrayToString( ioa ) + ", " + intArrayToString( sa3 ) + " ) ==> " + indexOfSubArray( ioa, sa3 ) );
-
-        System.out.println();
+//        System.out.println( "indexOfSubArray( " + js + ", " + intArrayToString( sa1 ) + " ) ==> " + indexOfSubArray( jenny, sa1 ) );
+//        System.out.println( "indexOfSubArray( " + js + ", " + intArrayToString( sa2 ) + " ) ==> " + indexOfSubArray( jenny, sa2 ) );
+//        System.out.println( "indexOfSubArray( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + indexOfSubArray( jenny, ioa4 ) );
+//        System.out.println( "indexOfSubArray( " + intArrayToString( ioa ) + ", " + intArrayToString( sa3 ) + " ) ==> " + indexOfSubArray( ioa, sa3 ) );
+//
+//        System.out.println();
         
         int [] cio1 = { 8, 7, 5, 9 };
         int [] cio2 = { 8, 5, 7, 9 };
         int [] cio3 = { 8, 7, 5, 1 };
         
-        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( cio1 ) + " ) ==> " + containsInOrder( jenny, cio1 ) );
-        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( cio2 ) + " ) ==> " + containsInOrder( jenny, cio2 ) );
-        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( cio3 ) + " ) ==> " + containsInOrder( jenny, cio3 ) );
-        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + containsInOrder( jenny, ioa4 ) );
-        System.out.println( "containsInOrder( " + intArrayToString( cio1 ) + ", " + intArrayToString( cio1 ) + " ) ==> " + containsInOrder( ioa4, ioa4 ) );
+//        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( cio1 ) + " ) ==> " + containsInOrder( jenny, cio1 ) );
+//        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( cio2 ) + " ) ==> " + containsInOrder( jenny, cio2 ) );
+//        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( cio3 ) + " ) ==> " + containsInOrder( jenny, cio3 ) );
+//        System.out.println( "containsInOrder( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + containsInOrder( jenny, ioa4 ) );
+//        System.out.println( "containsInOrder( " + intArrayToString( cio1 ) + ", " + intArrayToString( cio1 ) + " ) ==> " + containsInOrder( ioa4, ioa4 ) );
 
-        System.out.println();
+//        System.out.println();
         
         int [] arr = { 4, 5, 6, 4, 3, 6};
-        System.out.println( "removePairsInPlace( " + intArrayToString(arr) + " )" );
+//        System.out.println( "removePairsInPlace( " + intArrayToString(arr) + " )" );
         removePairsInPlace( arr );
-        System.out.println( "arr is now          " + intArrayToString(arr) );
+//        System.out.println( "arr is now          " + intArrayToString(arr) );
         
         int [] arr2 = {  4, 4, 4, 3, 3, 3, 3 };
-        System.out.println( "removePairsInPlace( " + intArrayToString(arr2) + " )" );
+//        System.out.println( "removePairsInPlace( " + intArrayToString(arr2) + " )" );
         removePairsInPlace( arr2 );
-        System.out.println( "arr2 is now         " + intArrayToString(arr2) );
+//        System.out.println( "arr2 is now         " + intArrayToString(arr2) );
         
-        System.out.println( "removePairsInPlace( " + intArrayToString( jenny2 ) + " )" );
+//        System.out.println( "removePairsInPlace( " + intArrayToString( jenny2 ) + " )" );
         removePairsInPlace( jenny2 );
-        System.out.println( "jenny2 is now       " + intArrayToString( jenny2 ) );
+//        System.out.println( "jenny2 is now       " + intArrayToString( jenny2 ) );
         
-        System.out.println();
+//        System.out.println();
         
         int [] meu = { 4, 3, 0, 6, 7, 0, 0, 0, 9 };
-        System.out.println( "moveNonZeroElementsUp( " + intArrayToString( meu ) + " )" );
+//        System.out.println( "moveNonZeroElementsUp( " + intArrayToString( meu ) + " )" );
         moveNonZeroElementsUp( meu );
-        System.out.println( "meu is now      " + intArrayToString( meu ) );
+//        System.out.println( "meu is now      " + intArrayToString( meu ) );
         
-        System.out.println();
+//        System.out.println();
         
-        System.out.println("appendArrays( " + js + ", " + intArrayToString( ioa ) + " ) ==> " + intArrayToString( horizontalConcatenate(jenny, ioa) ) );
-        System.out.println("appendArrays( " + js + ", " + intArrayToString( ioa4 ) + " ) ==> " + intArrayToString( horizontalConcatenate(jenny, ioa4) ) );
-        System.out.println("appendArrays( " + intArrayToString( ioa4 ) + ", " + js + " ) ==> " + intArrayToString( horizontalConcatenate(ioa4, jenny) ) );
+//        System.out.println("flatCat( " + js + ", " + intArrayToString( ioa ) + " ) ==>\n\t" 
+//                + intArrayToString( flatCat(jenny, ioa) ) );
+//        System.out.println("flatCat( " + js + ", " + intArrayToString( ioa4 ) + " ) ==>\n\t" 
+//                + intArrayToString( flatCat(jenny, ioa4) ) );
+//        System.out.println("flatCat( " + intArrayToString( ioa4 ) + ", " + js + " ) ==>\n\t" 
+//                + intArrayToString( flatCat(ioa4, jenny) ) );
         
-        System.out.println();
-        
+//        System.out.println();
+//        
         int [] ia = { 1, 2, 3, 4, 5, 6, 7 };
-        System.out.println("interleaveArrays( " + js + ", " + intArrayToString( ia ) + " ) ==> " + intArrayToString( interleaveArrays( jenny, ia ) ) );
+        System.out.println("interleaveArrays( " + js + ", " 
+                + intArrayToString( ia ) + " ) ==>\n\t" 
+                + intArrayToString( interleaveArrays( jenny, ia ) ) );
 
         System.out.println();
         
         int [] dp1 = { 8, 3, 9 };
         int [] dp2 = { 4, 3, 6 };
-        System.out.println( "dotProduct( " + intArrayToString( dp1 ) + ", " + intArrayToString( dp2 ) + " ) ==> " + dotProduct( dp1, dp2 ) ) ;
-        System.out.println( "dotProduct( " + intArrayToString( ioa4 ) + ", " + intArrayToString( ioa4 ) + " ) ==> " + dotProduct( ioa4, ioa4 ) ) ;
+//        System.out.println( "dotProduct( " + intArrayToString( dp1 ) + ", " + intArrayToString( dp2 ) + " ) ==> " + dotProduct( dp1, dp2 ) ) ;
+//        System.out.println( "dotProduct( " + intArrayToString( ioa4 ) + ", " + intArrayToString( ioa4 ) + " ) ==> " + dotProduct( ioa4, ioa4 ) ) ;
 
     }
     
@@ -264,11 +269,21 @@ public class AdvancedArrayPractice
     // target - the shorter array to search for
     public static int indexOfSubArray( int [] source, int [] target )
     {
-        return -1;
+        if (target.length == 0) return 0; //empty case
+        int start = indexOf(source, target[0]);
+        if (target.length == 1) return start; //single case
+        
+        int[] indexArray = indicesOf(source, target);
+        //check consecutivity
+        for(int i = indexArray.length - 1; i > 0; i--) {
+            if (indexArray[i] - indexArray[i - 1] != 1) return -1;
+        }
+        return start;
     }
     
     // containsInOrder
-    // checks the source array to see if the elements of the target array occur in order (though not necessarily consecutively)
+    // checks the source array to see if the elements of the target array 
+    // occur in order (though not necessarily consecutively)
     // ex:
     // containsInOrder( { 8, 6, 7, 5, 3, 0, 9 }, {8, 7, 5, 9} ) ==> true
     // containsInOrder( { 8, 6, 7, 5, 3, 0, 9 }, {8, 5, 7, 9} ) ==> false
@@ -279,10 +294,16 @@ public class AdvancedArrayPractice
     // source - the array in which to find the elements of target
     // target - the elements to find in order within source
     // output:
-    // returns true if the elements of target can be found in order within source, false otherwise
+    // returns true if the elements of target can be found in order within
+    // source, false otherwise
     public static boolean containsInOrder( int [] source, int [] target )
     {
-        return false;
+        if (target.length == 0) return true; //empty case
+        int [] indices = indicesOf(source, target);
+        for(int i = 0; i < indices.length - 1; i++) {
+            if (indices[i + 1] < indices[i]) return false;
+        }
+        return true;
     }
     
     // removePairsInPlace
@@ -303,7 +324,12 @@ public class AdvancedArrayPractice
     // note that arr will (usually) be modified by this function
     public static void removePairsInPlace( int [] arr )
     {
-        
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) continue;
+            for (int j = 0; j < arr.length; j++) 
+                if (j != i && arr[i] == arr[j]) 
+                    arr[i] = arr[j] = 0;
+        }
     }
     
     // moveNonZeroElementsUp
@@ -315,24 +341,39 @@ public class AdvancedArrayPractice
     // note that arr will (usually) be modified by this function!
     public static void moveNonZeroElementsUp( int [] arr )
     {
-        
+        int length = 0;
+        for (int i : arr) if (i != 0) length++;     //count nonzeros
+        int counter = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                int temp = arr[i];
+                arr[i] = 0;
+                arr[counter++] = temp;
+            }
+        }
     }
     
-    // horizontalConcatenate
+    // flatCat (horizontal concatentation)
     // produces a new array which is the elements of one array followed by the elements of a second array
     // ex:
-    // horizontalConcatenate( {8, 6, 7, 5, 3, 0, 9}, {4, 5, 6, 4, 5, 6} ) ==> {8, 6, 7, 5, 3, 0, 9, 4, 5, 6, 4, 5, 6}
-    // horizontalConcatenate( {8, 6, 7, 5, 3, 0, 9}, { } ) ==> {8, 6, 7, 5, 3, 0, 9}
-    // horizontalConcatenate( { }, {8, 6, 7, 5, 3, 0, 9} ) ==> {8 ,6, 7, 5, 3, 0, 9}
+    // flatCat( {8, 6, 7, 5, 3, 0, 9}, {4, 5, 6, 4, 5, 6} ) ==> {8, 6, 7, 5, 3, 0, 9, 4, 5, 6, 4, 5, 6}
+    // flatCat( {8, 6, 7, 5, 3, 0, 9}, { } ) ==> {8, 6, 7, 5, 3, 0, 9}
+    // flatCat( { }, {8, 6, 7, 5, 3, 0, 9} ) ==> {8 ,6, 7, 5, 3, 0, 9}
     // inputs:
     // arr1 - the first array
     // arr2 - the second array
     // output:
     // an array which contains the elements of both arr1 and arr2
-    public static int [] horizontalConcatenate( int [] arr1, int [] arr2 )
+    public static int [] flatCat( int [] arr1, int [] arr2 )
     {
         int[] output = new int[arr1.length + arr2.length];
-        return new int[0];
+        for (int i = 0; i < arr1.length; i++) {
+            output[i] = arr1[i];
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            output[i + arr1.length] = arr2[i];
+        }
+        return output;
     }
     
     // interleaveArrays
@@ -347,7 +388,12 @@ public class AdvancedArrayPractice
     // an array containing the elements of arr1 interleaved with those of arr2
     public static int [] interleaveArrays( int [] arr1, int [] arr2 )
     {
-        return new int[0];
+        int[] output = new int[arr1.length + arr2.length];
+        for ( int i = 0; i < arr1.length + arr2.length; i++) {
+            if (i%2 == 0) output[i] = arr1[i/2];
+            else output[i] = arr2[i/2];
+        }
+        return output;
     }
     
     // dotProduct
